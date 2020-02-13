@@ -17,7 +17,7 @@ Route::rule('wap', 'api/index/mindex');
 
 Route::rule('web', 'api/index/index');
 
-Route::rule('log', 'admin/login/index');
+Route::alias('log', 'admin/login/index');
 
 return [
 
