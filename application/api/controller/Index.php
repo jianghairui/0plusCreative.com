@@ -26,6 +26,15 @@ class Index extends Controller {
     }
 
     public function mindex() {
+        try {
+            $where = [
+                ['id','=',1]
+            ];
+            $info = Db::table('mp_plat')->where($where)->find();
+        } catch(\Exception $e) {
+            return ajax($e->getMessage(),-1);
+        }
+        $this->assign('info',$info);
         return $this->fetch();
     }
 
