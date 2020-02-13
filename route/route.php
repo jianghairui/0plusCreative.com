@@ -13,7 +13,11 @@ Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
 
-Route::rule('wx', 'admin/api/index');
+Route::rule('wap', 'api/index/mindex');
+
+Route::rule('web', 'api/index/index');
+
+Route::rule('log', 'admin/login/index');
 
 return [
 

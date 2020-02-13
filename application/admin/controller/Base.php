@@ -26,19 +26,6 @@ class Base extends Controller {
         $this->controller = request()->controller();
         $this->upload_base_path = 'upload/admin/';
         $this->rename_base_path = 'upload/api/';
-        $this->token = config('wx_token');
-        $this->encodingAesKey = config('wx_encodingAesKey');
-        /*-------山洞公众号------*/
-        $this->config = [
-            'appid' => config('wx_appid'),
-            'app_secret' => config('wx_app_secret')
-        ];
-        $this->mp_config = [
-            'appid' => config('appid'),
-            'app_secret' => config('app_secret'),
-            'mch_id' => config('mch_id')
-        ];
-
 
         if(!$this->needSession()) {
             if(request()->isPost()) {
@@ -62,17 +49,17 @@ class Base extends Controller {
             return true;
         }else {
             if(session('username') && session('loginstatus') && session('loginstatus') == md5(session('username') . config('login_key'))) {
-                if(session('username') !== config('superman')) {
-                    $auth = new Auth();
-                    $bool = $auth->check($this->cmd,session('admin_id'));
-                    if(!$bool) {
-                        if(request()->isPost()) {
-                            throw new HttpResponseException(ajax('没有权限',-1));
-                        }else {
-                            exit($this->fetch('public/noAuth'));
-                        }
-                    }
-                }
+//                if(session('username') !== config('superman')) {
+//                    $auth = new Auth();
+//                    $bool = $auth->check($this->cmd,session('admin_id'));
+//                    if(!$bool) {
+//                        if(request()->isPost()) {
+//                            throw new HttpResponseException(ajax('没有权限',-1));
+//                        }else {
+//                            exit($this->fetch('public/noAuth'));
+//                        }
+//                    }
+//                }
                 return true;
             }else {
                 return false;
