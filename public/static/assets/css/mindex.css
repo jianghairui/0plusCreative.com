@@ -13,6 +13,9 @@
     top: 0;
     left: 0;
 }
+.fp-section{
+    transition: ease-in-out .3s;
+}
 .top .toplogo {
     width: 3.6rem;
     display: flex;
@@ -65,11 +68,15 @@
     text-align: center;
     line-height: 0.6rem;
     font-weight: bold;
-    position: absolute;
-    top: 0.69rem;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+    position: relative;
+    /*position: absolute;*/
+    /*top: 0.69rem;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*z-index: 10;*/
+    margin-bottom: 2rem;
+    transition: ease-in-out .3s;
+
 }
 .bg .title:before {
     content: '';
@@ -85,14 +92,25 @@
     background-image: url("../mimgs/bg1.png");
 }
 .bg.bg1 .bg1text {
-    padding: 50vh 0 0 0;
+    margin: 50vh 0 0 0;
     text-align: center;
     font-weight: bold;
     color: #fff;
     font-size: 0.56rem;
 }
+.bg.bg1 .face{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width:2.5rem ;
+}
+.bg.bg1 .face img{
+    width: 100%;
+}
 .bg.bg1 .bg1en {
-    width: 6rem;
+    width: 5.5rem;
     margin: 0 auto;
 }
 .bg.bg1 .bg1en img {
@@ -120,6 +138,9 @@
 }
 .bg.bg2 {
     background-image: url("../mimgs/bg2.png");
+}
+.bg.bg2 .title{
+    margin-bottom: 4rem;
 }
 .bg.bg2 .swiper-container .swiper-wrapper {
     width: 100%;
@@ -150,6 +171,9 @@
 .bg.bg3 {
     background: linear-gradient(0deg, #ed7138, #ffab4b);
 }
+.bg.bg3 .title{
+    margin-bottom: 4rem;
+}
 .bg.bg3 .title:before {
     border-bottom: 0.08rem solid #fff;
 }
@@ -174,6 +198,7 @@
 }
 .bg.bg3 .iconbox .itembox .iconitem img {
     width: 1.13rem;
+    flex-shrink: 0;
 }
 .bg.bg3 .iconbox .itembox .iconitem .text {
     padding: 0.28rem 0;
@@ -268,6 +293,9 @@
 .bg.bg5 .title {
     color: #585858;
 }
+.bg.bg5 .bbox {
+    /*margin: .3rem 0 0 0;*/
+}
 .bg.bg5 .bbox .imgbox {
     display: flex;
     align-items: center;
@@ -276,6 +304,11 @@
 }
 .bg.bg5 .bbox .imgbox.imgbox2 {
     padding: 0 0.7rem;
+}
+.bg.bg5 .bbox .imgbox.imgbox2 .box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 .bg.bg5 .bbox .imgbox .plus {
     width: 0.36rem;
@@ -286,7 +319,7 @@
 .bg.bg5 .bbox .imgbox .textspan {
     color: #282727;
     font-size: 0.3rem;
-    padding: 0.55rem 0 0 0;
+    padding: 0.25rem 0 0 0;
 }
 .bg.bg5 .bbox .imgbox .textspan .span {
     font-size: 0.34rem;
@@ -299,7 +332,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0.55rem 0.64rem 0.55rem;
+    padding: 0 0.55rem .35rem 0.55rem;
 }
 .bg.bg5 .bbox .plusbox img {
     width: 0.36rem;
@@ -316,14 +349,20 @@
 }
 .bg.bg5 .bbox .equbox .logo {
     width: 1.52rem;
-    margin: 0.7rem 0 0.2rem 0;
+    margin: 0.5rem 0 0.2rem 0;
 }
 .bg.bg5 .bbox .equbox .textspan {
     font-weight: bold;
     font-size: 0.38rem;
 }
+.bg5 .fp-tableCell{
+    padding: .5rem 0 0 0;
+}
 .bg.bg6 {
     background-color: #F4A032;
+}
+.bg.bg6 .title{
+    margin: 0;
 }
 .bg.bg6 .title:before {
     border-bottom: 0.08rem solid #fff;
@@ -334,7 +373,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 0 0.64rem;
-    margin: 1.3rem 0 0 0;
+    margin: .5rem 0 0 0;
 }
 .bg.bg6 .hbox .hitem {
     width: 2.86rem;

@@ -89,7 +89,7 @@
     background-image: url("../imgs/bg7.png");
 }
 .bg1text {
-    font-size: 69px;
+    font-size: 67px;
     color: #fff;
     font-weight: bold;
     text-align: left;
@@ -106,7 +106,7 @@
     color: #fff;
 }
 .bg1en img {
-    width: 752px;
+    width: 700px;
 }
 .face {
     position: absolute;
@@ -143,14 +143,17 @@
     font-size: 38px;
     color: #fff;
     text-align: center;
-    padding: 66px 0 0 0;
+    /*padding: 66px 0 0 0;*/
     line-height: 60px;
     position: relative;
     font-weight: bold;
 }
+.bg3 .title{
+    padding: 66px 0 0 0;
+}
 .box {
     overflow: hidden;
-    padding: 100px 0 0 0;
+    padding: 50px 0 0 0;
     width: 1200px;
     margin: 0 auto;
 }
@@ -341,8 +344,9 @@
     width: 100%;
 }
 .iconitem .text {
-    font-size: 26px;
-    padding: 29px 0;
+    font-size: 22px;
+    padding: 15px 0 ;
+    text-align: center;
 }
 .mr0 {
     margin-right: 0;
@@ -358,6 +362,9 @@
 }
 .bg4 img {
     width: 100%;
+}
+.bg4 .title,.bg5 .title, .bg6 .title{
+    padding: 66px 0 0 0;
 }
 .imgleft {
     width: 24%;
@@ -423,11 +430,14 @@
     overflow: hidden;
 }
 .bbox .bitem {
-    float: left;
-    width: 16.8%;
-    margin-right: 4%;
+    /*float: left;*/
+    /*width: 16.8%;*/
+    /*margin-right: 4%;*/
     text-align: center;
-    position: relative;
+    /*position: relative;*/
+    position: absolute;
+    left: -260px;
+    /*overflow: hidden;*/
 }
 .bbox .bitem .imgbox {
     width: 150px;
@@ -537,19 +547,19 @@
 }
 .address {
     padding: 20px 0 0 0;
-    font-size: 32px;
+    font-size: 22px;
     width: 750px;
     margin: 0 auto;
     color: #fff;
     text-align: justify;
 }
 .address .icon {
-    width: 37px;
+    width: 26px;
     margin: 0 10px 0 0;
     display: inline-block;
 }
 .address .icon.add {
-    width: 29px;
+    width: 20px;
 }
 .address .ress {
     padding-left: 10px;
