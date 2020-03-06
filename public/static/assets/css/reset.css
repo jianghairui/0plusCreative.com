@@ -14,6 +14,7 @@
     -moz-box-sizing: border-box;
 }
 /* reset */
+
 html,
 body {
     width: 100%;
@@ -23,15 +24,19 @@ body {
 }
 html {
     -webkit-text-size-adjust: 100%;
+    font-size: 100px;
 }
 body {
     line-height: 1;
-    font-family: "PingFangSC-Regular", "Microsoft YaHei", "Helvetica", "STHeiTi", "sans-serif";
+    /*font-family: "PingFangSC-Regular", "Microsoft YaHei", "Helvetica", "STHeiTi", "sans-serif";*/
+    font-family:
+        /* 1 */ -apple-system, BlinkMacSystemFont,
+        /* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        /* 3 */ "Helvetica Neue", sans-serif;
     /*移动端页面支持流畅滚动*/
     -webkit-overflow-scrolling: touch;
     /*让页面里的字体变清晰，变细*/
     -webkit-font-smoothing: antialiased;
-    font-size: 14px;
 }
 body,
 h1,

@@ -13,12 +13,40 @@
     <link rel="stylesheet" href="/static/assets/css/fullpage.min.css">
     <!--<link href="https://cdn.bootcss.com/fullPage.js/3.0.7/fullpage.min.css" rel="stylesheet">-->
     <link rel="stylesheet" href="/static/assets/css/index.css">
+    <!--<link rel="stylesheet" href="/static/assets/t.css">-->
+    <style>
+        .orbit.mercury {
+            width: 11.62rem;
+            height: 11.62rem;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            position: absolute;
+        }
+    </style>
+    <script>
+        var deviceWidth
+        setHtmlFontSize()
+        if (window.addEventListener) {
+            window.addEventListener('resize', function () {
+                setHtmlFontSize()
+            }, false)
+        }
+
+        function setHtmlFontSize() {
+            // 1366是设计稿的宽度，当大于1366时采用1366宽度，比例也是除以13.66
+            deviceWidth = document.documentElement.clientWidth > 1920 ? 1920 : document.documentElement.clientWidth
+            document.getElementsByTagName('html')[0].style.cssText = 'font-size:' + deviceWidth / 19.20 + 'px !important'
+        }
+    </script>
 </head>
 <body>
 <div class="top animated fast">
     <div class="container">
         <div class="logobox"><img src="/static/assets/imgs/logo.png" alt=""></div>
-        <ul id="menu">
+        <ul id="menu" class="menu">
             <li data-menuanchor="page1"><a href="#page1">首页</a></li>
             <li data-menuanchor="page2"><a href="#page2">我们是谁</a></li>
             <li data-menuanchor="page3"><a href="#page3">我们提供</a></li>
@@ -32,233 +60,289 @@
 <div id="fullpage">
     <div class="fp-section bg bg1">
         <div class="inner">
-            <div class="bg1text animated ">零动，只为创造无限美好</div>
-            <div class="bg1en animated delay-1s"><img src="/static/assets/imgs/en.png" alt=""></div>
+            <div class="bg1en ">
+                <div class="t1 animated delay-1s" id="t1">WE ARE BORN</div>
+                <div class="t2 animated delay-1s">TO CREATE INFINITE BEAUTY</div>
+            </div>
+            <div class="bg1text animated delay-2s">
+                <span class="lingbox"><span class="ling">零</span>动</span><span>,只为创造无限美好</span>
+            </div>
             <div class="face animated  delay-1s slow"><img src="/static/assets/imgs/face.png" alt=""></div>
             <div class="tips">往下滑动，快速认识我们</div>
-            <div class="tipsimg animated slideInDown slower infinite"><img src="/static/assets/imgs/tip.png" alt=""></div>
+            <a class="tipsimg animated slideInDown slower infinite" href="#page2">
+                <!--<img src="/static/assets/imgs/tip.png" alt="">-->
+                <div class="img"></div>
+                <div class="vr_wrap"></div>
+                <div class="vr_wrap2 "></div>
+            </a>
         </div>
     </div>
     <div class="fp-section bg bg2">
         <!--<div class="inner">-->
         <div class="title">
-            <div>我们是谁</div>
-            <div>WE ARE</div>
+            <span class="is"><span class="isword animated">是谁</span><span class="en animated">WE ARE</span><span
+                    class="us">我们</span></span>
         </div>
         <div class="box">
             <div class="item">
                 <div class="img item1 animated slow ">
                     <img src="/static/assets/imgs/p1.png" alt="">
-                    <div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>
+                    <!--<div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>-->
                 </div>
+                <div class="en animated delay-1s"><span>T</span>ech Guys</div>
                 <div class="itemtext animated delay-1s"> 一群技术咖</div>
-                <div class="en animated delay-1s">Tech Guys</div>
             </div>
             <div class="item">
                 <div class="img item1 animated slow ">
                     <img src="/static/assets/imgs/p2.png" alt="">
-                    <div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>
+                    <!--<div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>-->
                 </div>
+                <div class="en animated delay-1s"><span>H</span>ipsters</div>
                 <div class="itemtext animated delay-1s">一群文艺咖</div>
-                <div class="en animated delay-1s">Hipsters</div>
             </div>
             <div class="item">
                 <div class="img item1 animated slow ">
                     <img src="/static/assets/imgs/p3.png" alt="">
-                    <div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>
+                    <!--<div class="mold"><img src="/static/assets/imgs/bg2logo.png" alt=""></div>-->
                 </div>
+                <div class="en animated delay-1s"><span>A</span>rtists</div>
                 <div class="itemtext animated delay-1s"> 一群艺术咖</div>
-                <div class="en animated delay-1s">Artists</div>
             </div>
         </div>
         <!--</div>-->
     </div>
     <div class="fp-section bg bg3">
-        <div class="inner">
-            <div class="title">
-                <div>我们提供</div>
-                <div>WE OFFER</div>
+        <!--<div class="inner">-->
+        <!--<div class="title">-->
+        <!--<div>我们提供</div>-->
+        <!--<div>WE OFFER</div>-->
+        <!--</div>-->
+        <div class="title">
+                <span class="is"><span class="isword animated">提供</span><span class="en animated">WE OFFER</span><span
+                        class="us">我们</span></span>
+        </div>
+        <div class="iconbox">
+            <div class="bg l3 animated">
+                <!--<img src="/static/assets/imgs/l3.png" alt="">-->
+
             </div>
-            <div class="iconbox">
-                <div class="iconitem icon1  animated delay-02s faster">
-                    <img src="/static/assets/imgs/icon1.png" alt="">
-                    <div class="text">品牌咨询</div>
+            <div class="bg l4 animated ">
+                <!--<img src="/static/assets/imgs/l4.png" alt="">-->
+            </div>
+            <div class="boxitem">
+
+                <div class="iconitem icon1 icona animated ">
+                    <div class="en">FAN</div>
+                    <div class="en">OPERATIONS</div>
+                    <div class="text">粉丝运营</div>
+                    <img src="/static/assets/imgs/icon1.png" alt="" class="img">
                 </div>
-                <div class="iconitem icon2  animated delay-04s faster">
-                    <img src="/static/assets/imgs/icon2.png" alt="">
-                    <div class="text">娱乐营销</div>
-                </div>
-                <div class="iconitem icon3  animated delay-06s faster">
-                    <img src="/static/assets/imgs/icon3.png" alt="">
-                    <div class="text">公共关系</div>
-                </div>
-                <div class="iconitem animated delay-08s faster">
-                    <img src="/static/assets/imgs/icon4.png" alt="">
-                    <div class="text">视频电商</div>
-                </div>
-                <div class="iconitem animated delay-01s faster">
-                    <img src="/static/assets/imgs/icon5.png" alt="">
-                    <div class="text">数字营销</div>
-                </div>
-                <div class="iconitem icon3 animated delay-1-2s faster">
-                    <img src="/static/assets/imgs/icon6.png" alt="">
-                    <div class="text">舆情管理</div>
-                </div>
-                <div class="iconitem icon2 animated delay-1-4s faster">
-                    <img src="/static/assets/imgs/icon7.png" alt="">
+                <div class="iconitem icon2 iconb animated delay-01s">
+                    <img src="/static/assets/imgs/icon2.png" alt="" class="img">
+                    <div class="en">EVENT</div>
+                    <div class="en">OPERATIONS</div>
                     <div class="text">活动运营</div>
                 </div>
-                <div class="iconitem icon1 mr0 animated delay-1-6s faster">
-                    <img src="/static/assets/imgs/icon8.png" alt="">
-                    <div class="text">粉丝运营</div>
+                <div class="iconitem icon3 icona animated ">
+                    <div class="en">PUBlIC OPTION</div>
+                    <div class="en">MANAGEMENT</div>
+                    <div class="text">舆情管理</div>
+                    <img src="/static/assets/imgs/icon3.png" alt="" class="img">
                 </div>
-            </div>
-            <div class="offerbg animated slow">
-                <img src="/static/assets/imgs/offerbg.png" alt="">
-                <div class="logowhite">
-                    <img src="/static/assets/imgs/logowhite.png" alt="">
-                    <div class="logotext">全栈式品牌管理方案</div>
+                <div class="iconitem icon4 iconb animated delay-01s">
+                    <img src="/static/assets/imgs/icon4.png" alt="" class="img">
+                    <div class="en">DIGITAL</div>
+                    <div class="en">MARKETING</div>
+                    <div class="text">数字营销</div>
+                </div>
+                <div class="iconitem icon5 icona animated ">
+                    <div class="en">VIDEO</div>
+                    <div class="en">E-COMMERCE</div>
+                    <div class="text">视频电商</div>
+                    <img src="/static/assets/imgs/icon5.png" alt="" class="img">
+                </div>
+                <div class="iconitem icon6 iconb animated delay-01s">
+                    <img src="/static/assets/imgs/icon6.png" alt="" class="img">
+                    <div class="en">PUBLIC</div>
+                    <div class="en">RELATIONSHIP</div>
+                    <div class="text">公共关系</div>
+                </div>
+                <div class="iconitem icon7 icona animated ">
+                    <div class="en">ENTERTAINMENT</div>
+                    <div class="en">MARKETING</div>
+                    <div class="text">娱乐营销</div>
+                    <img src="/static/assets/imgs/icon7.png" alt="" class="img">
+                </div>
+                <div class="iconitem icon8 iconb animated delay-01s">
+                    <img src="/static/assets/imgs/icon8.png" alt="" class="img">
+                    <div class="en">BRAND</div>
+                    <div class="en">CONSULTING</div>
+                    <div class="text">品牌咨询</div>
                 </div>
             </div>
         </div>
+        <!--<div class="offerbg animated slow">-->
+        <!--<img src="/static/assets/imgs/offerbg.png" alt="">-->
+        <div class="logowhite">
+            <img src="/static/assets/imgs/logowhite.png" alt="">
+            <div class="logotext">全栈式品牌管理方案</div>
+        </div>
+        <!--</div>-->
+        <!--</div>-->
     </div>
     <div class="fp-section bg bg4">
-        <div class="inner">
+        <div class="inner ui_base">
             <div class="title">
-                <div>我们拥有</div>
-                <div>WE HAVE</div>
+                <span class="is"><span class="isword animated">拥有</span><span class="en animated">WE HAVE</span><span
+                        class="us">我们</span></span>
             </div>
-            <div class="imgleft ">
-                <img src="/static/assets/imgs/imgleft.png" class="animated  pulse infinite slow" alt="">
-                <div class="hbg bg animated  ">
-                    <div class="en animated ">0Plus AI</div>
-                    <div class="animated ">舆情行动系统</div>
+            <div class="">
+                <img src="/static/assets/imgs/l1.png" alt="" class="lineimg">
+                <!--<div class="orbit mercury"></div>-->
+                <div class=" imgleft ">
+                    <img src="/static/assets/imgs/imgleft.png" class="animated " alt="">
+                    <div class="hbg bg animated  ">
+                        <div class="en animated ">0Plus AI</div>
+                        <div class="animated ">舆情行动系统</div>
+                    </div>
                 </div>
-            </div>
-            <div class="imgmid">
-                <img src="/static/assets/imgs/imgmid.png" alt="" class="midimg animated  fast">
-                <div class="imglogo "><img src="/static/assets/imgs/imglogo.png" alt="">
+                <div class="imgmid">
+                    <img src="/static/assets/imgs/imgmid.png" alt="" class="midimg animated  fast">
                 </div>
-                <div class="imgtext animated ">智能化营销大脑</div>
-            </div>
-            <div class="imgright">
-                <img src="/static/assets/imgs/imgright.png" class="animated infinite pulse  slow" alt="">
-                <div class="hbg bg animated ">
-                    <div class="en animated ">0Plus AI</div>
-                    <div class="animated ">内容生产中心</div>
+                <div class="imgright">
+                    <img src="/static/assets/imgs/imgright.png" class="animated  ball_2 " alt="">
+                    <div class="hbg bg animated ">
+                        <div class="en animated ">0Plus AI</div>
+                        <div class="animated ">内容生产中心</div>
+                    </div>
                 </div>
-            </div>
-            <div class="imgl ">
-                <img src="/static/assets/imgs/imgl.png" class="animated infinite pulse  slow" alt="">
-                <div class="hbg bg animated">
-                    <div class="en animated ">0Plus AI</div>
-                    <div class="animated ">媒介发布中心</div>
+                <div class="imgl ">
+                    <img src="/static/assets/imgs/imgl.png" class="animated ball_3" alt="">
+                    <div class="hbg bg animated">
+                        <div class="en animated ">0Plus AI</div>
+                        <div class="animated ">媒介发布中心</div>
+                    </div>
                 </div>
-            </div>
-            <div class="imgr ">
-                <img src="/static/assets/imgs/imgr.png" class="animated infinite pulse  slow" alt="">
-                <div class="hbg bg animated ">
-                    <div class="en animated ">0Plus AI</div>
-                    <div class="animated ">效果监测中心</div>
+                <div class="imgr ">
+                    <img src="/static/assets/imgs/imgr.png" class="animated ball_4" alt="">
+                    <div class="hbg bg animated ">
+                        <div class="en animated ">0Plus AI</div>
+                        <div class="animated ">效果监测中心</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="fp-section bg bg5">
-        <div class="inner">
-            <div class="title">
-                <div>我们相信</div>
-                <div>WE BELIEVE</div>
-            </div>
-            <!--<div class="bbox animated slower">-->
-            <div class="bbox ">
-                <div class="bitem a ">
-                    <div class="imgbox animated">
-                        <img src="/static/assets/imgs/b1.png" alt="">
-                        <div class="plus animated "><img src="/static/assets/imgs/plus.png" alt=""></div>
+        <!--<div class="inner">-->
+        <!--<div class="title">-->
+        <!--<div>我们相信</div>-->
+        <!--<div>WE BELIEVE</div>-->
+        <!--</div>-->
+        <div class="title">
+                <span class="is"><span class="isword animated">相信</span><span class="en animated">WE BELIEVE</span><span
+                        class="us">我们</span></span>
+        </div>
+        <!--<div class="bbox animated slower">-->
+        <div class="bbox ">
+            <div class="img">
+                <img src="/static/assets/imgs/pc.png" alt="" class="imgs animated ">
+                <img src="/static/assets/imgs/line.png" alt="" class="line animated">
+                <div class="bitembox">
+                    <div class="bitem b1">
+                        <div class="imgbox  ">
+                            <img src="/static/assets/imgs/b1.png" alt="">
+                        </div>
+                        <div class="textspan"><span class="span">个性化 </span><span>的内容</span></div>
                     </div>
-                    <div class="textspan"><span class="span">个性化</span><span>的内容</span></div>
-                </div>
-                <div class="bitem b ">
-                    <div class="imgbox animated ">
-                        <img src="/static/assets/imgs/b2.png" alt="">
-                        <div class="plus animated "><img src="/static/assets/imgs/plus.png" alt=""></div>
+                    <div class="bitem b2">
+                        <div class="imgbox imgbox2 ">
+                            <img src="/static/assets/imgs/b2.png" alt="">
+                        </div>
+                        <div class="textspan "><span class="span">智能化 </span><span>的技术</span></div>
                     </div>
-                    <div class="textspan"><span class="span">多样化</span><span>的媒介</span></div>
-                </div>
-                <div class="bitem c ">
-                    <div class="imgbox animated ">
-                        <img src="/static/assets/imgs/b3.png" alt="">
-                        <div class="plus animated "><img src="/static/assets/imgs/plus.png" alt=""></div>
+                    <div class="bitem b3">
+                        <div class="imgbox imgbox3 ">
+                            <img src="/static/assets/imgs/b3.png" alt="">
+                        </div>
+                        <div class="textspan"><span class="span">人性化 </span><span>的算法</span></div>
                     </div>
-                    <div class="textspan"><span class="span">智能化</span><span>的技术</span></div>
-                </div>
-                <div class="bitem d ">
-                    <div class="imgbox animated ">
-                        <img src="/static/assets/imgs/b4.png" alt="">
-                        <div class="plus animated "><img src="/static/assets/imgs/eq.png" alt=""></div>
+                    <div class="bitem b4">
+                        <div class="imgbox imgbox4 ">
+                            <img src="/static/assets/imgs/b4.png" alt="">
+                        </div>
+                        <div class="textspan"><span class="span">多样化 </span><span>的媒介</span></div>
                     </div>
-                    <div class="textspan"><span class="span">人性化</span><span>的算法</span></div>
-                </div>
-                <div class="bitem e ">
-                    <span class="imgbox animated "><img src="/static/assets/imgs/b5.png" alt=""></span>
-                    <div class="textspan"><span class="span">成功的传播</span></div>
                 </div>
             </div>
         </div>
     </div>
     <div class="fp-section bg bg6">
-        <div class="inner">
-            <div class="title">
-                <div>我们厌恶</div>
-                <div>WE HATE</div>
+        <!--<div class="inner">-->
+        <div class="title">
+                <span class="is"><span class="isword animated">厌恶</span><span class="en animated">WE HATE</span><span
+                        class="us">我们</span></span>
+        </div>
+        <div class="hbox">
+            <div class="hitem ll1">
+                <div class="l l1">
+                    <img src="/static/assets/imgs/h1.png" alt="" class="h">
+                    <img src="/static/assets/imgs/w1.png" class="w" alt="">
+                </div>
+                <div class="htext">千篇一律</div>
             </div>
-            <div class="hbox">
-                <div class="hitem">
-                    <img src="/static/assets/imgs/h1.png" alt="">
-                    <div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>
-                    <div class="htext">
-                        <div class="keytitle">千篇一律</div>
-                        <div>（没内容）</div>
-                    </div>
+            <div class="hitem ll2">
+                <div class="l l2">
+                    <img src="/static/assets/imgs/h3.png" alt="" class="h">
+                    <img src="/static/assets/imgs/w2.png" alt="" class="w">
                 </div>
-
-                <div class="hitem">
-                    <img src="/static/assets/imgs/h3.png" alt="">
-                    <div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>
-                    <div class="htext">
-                        <div class="keytitle">流于形式</div>
-                        <div>（没新意）</div>
-                    </div>
+                <!--<div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>-->
+                <div class="htext">流于形式</div>
+            </div>
+            <div class="hitem ll3">
+                <div class="l l3">
+                    <img src="/static/assets/imgs/h2.png" alt="" class="h">
+                    <img src="/static/assets/imgs/w3.png" alt="" class="w">
                 </div>
-                <div class="hitem">
-                    <img src="/static/assets/imgs/h2.png" alt="">
-                    <div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>
-                    <div class="htext">
-                        <div class="keytitle">张嘴就来</div>
-                        <div>（没论据）</div>
-                    </div>
+                <!--<div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>-->
+                <div class="htext">张嘴就来</div>
+            </div>
+            <div class="hitem ll4">
+                <div class="l l4">
+                    <img src="/static/assets/imgs/h4.png" alt="" class="h h4">
+                    <img src="/static/assets/imgs/w4.png" alt="" class="w">
                 </div>
-                <div class="hitem">
-                    <img src="/static/assets/imgs/h4.png" alt="">
-                    <div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>
-                    <div class="htext">
-                        <div class="keytitle">自娱自乐</div>
-                        <div>（没效果）</div>
-                    </div>
-                </div>
+                <!--<div class="img"><img src="/static/assets/imgs/bg6logo.png" alt=""></div>-->
+                <div class="htext">自娱自乐</div>
             </div>
         </div>
+        <!--</div>-->
     </div>
     <div class="fp-section bg bg7">
         <div class="inner">
             <div class="qplus animated  "><img src="/static/assets/imgs/qplus.png" alt=""></div>
-            <div class="address"><img src="/static/assets/imgs/email.png" class="icon"
-                                      alt=""><span>：{$info.email}</span></div>
-            <div class="address"><img src="/static/assets/imgs/address.png" class="icon add" alt=""><span>：{$info.address}</span>
+            <div class="address animated delay-02s">
+                <img src="/static/assets/imgs/email.png" class="icon" alt="">
+                <span>：{$info.email}</span>
             </div>
-            <div class="address"><span class="icon "></span><span class="ress"> {$info.address2}</span></div>
+            <div class="address animated delay-06s">
+                <img src="/static/assets/imgs/address.png" class="icon add" alt="">
+                <span>：{$info.address}</span>
+            </div>
+            <div class="address animated delay-08s">
+                <span class="icon "></span>
+                <span class="ress"> {$info.address2}</span>
+            </div>
         </div>
+        <ul id="menu" class="bmenu">
+            <li data-menuanchor="page1" class="animated delay-02s"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2" class="animated delay-04s"><a href="#page2">我们是谁</a></li>
+            <li data-menuanchor="page3" class="animated delay-06s"><a href="#page3">我们提供</a></li>
+            <li data-menuanchor="page4" class="animated delay-08s"><a href="#page4">我们拥有</a></li>
+            <li data-menuanchor="page5" class="animated delay-1-2s"><a href="#page5">我们相信</a></li>
+            <li data-menuanchor="page6" class="animated delay-1-4s"><a href="#page6">我们厌恶</a></li>
+            <li data-menuanchor="page7" class="animated delay-1-6s"><a href="#page7">联系我们</a></li>
+        </ul>
     </div>
 </div>
 </body>
