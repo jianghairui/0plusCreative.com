@@ -843,6 +843,15 @@
 .bg.bg7 .address .ress {
     padding: 0 0 0 0.6rem;
 }
+.address.beian {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.address.beian a {
+    color: #fff;
+    font-size: .22rem;
+}
 
 .vr_wrap {
     background: #FF6317;

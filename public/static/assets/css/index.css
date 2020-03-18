@@ -1221,6 +1221,14 @@
 
 .address .ress {
     padding-left: .1rem;
+    color: #fff;
+}
+.address.beian{
+    margin-top: 2rem;
+    text-align: center;
+}
+.address.beian:hover a{
+    color: #333;
 }
 
 .hbg {
